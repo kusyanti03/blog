@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D's Coffee - Coming Soon!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .countdown-box {
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>D's Coffee</h1>
+        <p class="tagline">Segera Hadir di Kota Anda!</p>
+        
+        <div class="countdown">
+            <div class="countdown-box">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Hari</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Jam</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Menit</div>
+            </div>
+            <div class="countdown-box">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Detik</div>
+            </div>
+        </div>
+
+        <p>Nikmati pengalaman kopi terbaik bersama kami</p>
+        
+        <div class="menu-preview" style="margin: 40px 0;">
+            <h3 style="margin-bottom: 20px; color: #d4af37;">Preview Menu Kami</h3>
+            <div class="menu-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 800px;">
+                <div class="menu-item" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; text-align: left;">
+                    <h4 style="color: #d4af37; margin-bottom: 10px;">Signature Coffee</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 8px;">☕ D's Espresso - Rp 25.000</li>
+                        <li style="margin-bottom: 8px;">☕ Caramel Macchiato - Rp 35.000</li>
+                        <li style="margin-bottom: 8px;">☕ Vanilla Latte - Rp 33.000</li>
+                        <li style="margin-bottom: 8px;">☕ Hazelnut Coffee - Rp 33.000</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-item" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; text-align: left;">
+                    <h4 style="color: #d4af37; margin-bottom: 10px;">Manual Brew</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 8px;">☕ V60 - Rp 30.000</li>
+                        <li style="margin-bottom: 8px;">☕ Chemex - Rp 35.000</li>
+                        <li style="margin-bottom: 8px;">☕ Vietnam Drip - Rp 28.000</li>
+                        <li style="margin-bottom: 8px;">☕ French Press - Rp 30.000</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-item" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; text-align: left;">
+                    <h4 style="color: #d4af37; margin-bottom: 10px;">Non-Coffee</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 8px;">🍵 Matcha Latte - Rp 35.000</li>
+                        <li style="margin-bottom: 8px;">🍫 Hot Chocolate - Rp 30.000</li>
+                        <li style="margin-bottom: 8px;">🍵 Thai Tea - Rp 28.000</li>
+                        <li style="margin-bottom: 8px;">🍋 Lemon Tea - Rp 25.000</li>
+                    </ul>
+                </div>
+                
+                <div class="menu-item" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; text-align: left;">
+                    <h4 style="color: #d4af37; margin-bottom: 10px;">Snacks</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 8px;">🥐 Croissant - Rp 25.000</li>
+                        <li style="margin-bottom: 8px;">🍰 Coffee Cake - Rp 30.000</li>
+                        <li style="margin-bottom: 8px;">🍪 Cookies - Rp 20.000</li>
+                        <li style="margin-bottom: 8px;">🥨 French Fries - Rp 25.000</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; font-size: 0.9rem;">*Harga dapat berubah sewaktu-waktu</p>
+        </div>
+
+        <div class="location-info" style="margin: 30px 0;">
+            <h2>Lokasi Kami</h2>
+            <p>Jl. Contoh No. 123, Kota Anda</p>
+        </div>
+
+        <div class="social-links">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <script>
+        // Set tanggal pembukaan (format: tahun, bulan (0-11), tanggal, jam, menit, detik)
+        const openingDate = new Date(2025, 5, 1, 10, 0, 0).getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = openingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.querySelector('.countdown').innerHTML = "<h2>Kami telah dibuka!</h2>";
+            }
+        }
+
+        // Update countdown setiap 1 detik
+        const countdownTimer = setInterval(updateCountdown, 1000);
+
+        // Jalankan updateCountdown segera setelah halaman dimuat
+        updateCountdown();
+    </script>
+</body>
+</html> 
